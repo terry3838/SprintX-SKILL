@@ -1,15 +1,12 @@
 ---
 name: sprintx-openclaw-handoff
 description: Guide an existing OpenClaw operator through the SprintX handoff proof packet with the minimum safe steps: verify prerequisites, connect with sx auth, select the project, send the first event and artifact, then confirm read-back with sx status and sx brief.
-version: 0.1.2
+version: 0.1.3
 metadata:
   openclaw:
     requires:
       bins:
         - sx
-      env:
-        - SX_ACCESS_TOKEN
-        - SX_API_URL
     install:
       - kind: node
         package: "@sprint-x/cli"
@@ -137,15 +134,15 @@ In headless mode, the approval URL is printed to stdout. The user should open th
 
 ### Access-token override
 
-If the environment already injects `SX_ACCESS_TOKEN`, SprintX CLI skips browser auth.
+If the environment already injects an access token, SprintX CLI can skip browser auth.
 
 Treat this as advanced or break-glass behavior only.
 
 Hard rule:
-- Do not ask users to paste `SX_ACCESS_TOKEN` into chat.
+- Do not ask users to paste tokens into chat.
 - Do not recommend token copy/paste as the default onboarding path.
 
-If the user needs the exact token override procedure, point them to the upstream SprintX CLI docs in `references/source-of-truth.md`.
+If the user needs the exact token override procedure or API URL override steps, point them to the upstream SprintX CLI docs in `references/source-of-truth.md`.
 
 ## Rescue Map
 
@@ -164,7 +161,7 @@ Always name the failure class and give the explicit next command or next check. 
 - `readback_failed`
   Reconfirm auth and project context, then retry `sx status` and `sx brief`.
 - `api_unreachable`
-  Verify `SX_API_URL`, connectivity, and retry window.
+  Verify the SprintX API base URL, connectivity, and retry window.
 
 ## Guardrails
 

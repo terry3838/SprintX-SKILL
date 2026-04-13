@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 - 2026-04-13
+
+- Add Korean and Chinese README variants
+- Rewrite access-token guidance so the skill only declares the real required runtime dependency (`sx`)
+- Republish the bundle with narrower metadata to reduce registry packaging ambiguity
+
 ## 0.1.2 - 2026-04-13
 
 - Rewrite the README for humans instead of maintainers

@@ -48,7 +48,7 @@ assertIncludes(
 
 assertIncludes(
   skill,
-  "Do not ask users to paste `SX_ACCESS_TOKEN` into chat.",
+  "Do not ask users to paste tokens into chat.",
   "skill must explicitly warn against token paste into chat"
 );
 

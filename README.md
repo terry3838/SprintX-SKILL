@@ -25,6 +25,8 @@ Links:
 - GitHub: https://github.com/terry3838/SprintX-SKILL
 - SprintX handoff quickstart: https://www.sprintx.co.kr/docs/getting-started/openclaw-handoff-quickstart
 - SprintX CLI quickstart: https://www.sprintx.co.kr/docs/getting-started/cli-quickstart
+- Korean README: [README.ko.md](./README.ko.md)
+- Chinese README: [README.zh.md](./README.zh.md)
 
 ## Why This Exists
 
@@ -124,7 +126,7 @@ This is important.
 
 - SprintX is not the executor. OpenClaw executes, SprintX reads and governs.
 - The default auth path is browser-approved `sx auth`.
-- `SX_ACCESS_TOKEN` is treated as advanced or break-glass only.
+- Access-token override is treated as advanced or break-glass only.
 - The skill explicitly warns against pasting tokens into chat.
 - Provider API keys are outside this flow.
 
@@ -138,7 +140,7 @@ Examples:
 sx --headless auth
 ```
 
-The skill also documents the advanced `SX_ACCESS_TOKEN` override, but keeps it out of the main onboarding path on purpose.
+The skill also documents the advanced access-token override, but keeps it out of the main onboarding path on purpose.
 
 ## Repo Structure
 
@@ -193,9 +195,9 @@ Publish:
 clawhub publish . \
   --slug sprintx-openclaw-handoff \
   --name "SprintX OpenClaw Handoff" \
-  --version 0.1.2 \
+  --version 0.1.3 \
   --tags latest \
-  --changelog "Rewrite README for human-first onboarding"
+  --changelog "Add localized READMEs and tighten metadata to match real requirements"
 ```
 
 We keep publish manual on purpose. The current ClawHub docs clearly support CLI-driven skill publish, while plugin/package auto-publish flows are more mature than skill auto-publish flows today.
@@ -213,7 +215,7 @@ Note:
 - 기본 경로는 `sx auth -> sx project use -> sx event -> sx artifact add -> sx status -> sx brief`
 - `projectId`는 handoff URL/card가 우선
 - `sx project list`는 복구 경로
-- `SX_ACCESS_TOKEN`은 기본 경로가 아니라 advanced-only
+- access-token override는 기본 경로가 아니라 advanced-only
 
 한국어 상세 문서:
 
