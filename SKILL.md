@@ -1,7 +1,7 @@
 ---
 name: sprintx-openclaw-handoff
 description: Guide an existing OpenClaw operator through the SprintX handoff proof packet with the minimum safe steps: verify prerequisites, connect with sx auth, select the project, send the first event and artifact, then confirm read-back with sx status and sx brief.
-version: 0.1.0
+version: 0.1.1
 metadata:
   openclaw:
     requires:
@@ -9,6 +9,7 @@ metadata:
         - sx
       env:
         - SX_ACCESS_TOKEN
+        - SX_API_URL
     install:
       - kind: node
         package: "@sprint-x/cli"

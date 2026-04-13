@@ -36,9 +36,9 @@ Publish:
 clawhub publish . \
   --slug sprintx-openclaw-handoff \
   --name "SprintX OpenClaw Handoff" \
-  --version 0.1.0 \
+  --version 0.1.1 \
   --tags latest \
-  --changelog "Initial release"
+  --changelog "Add missing packaging metadata and license mirror"
 ```
 
 We keep publish manual on purpose. The current ClawHub docs clearly support CLI-driven skill publish, while plugin/package auto-publish flows are more mature than skill auto-publish flows today.
