@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 - 2026-04-13
+
+- Rewrite the README for humans instead of maintainers
+- Add a clearer quick start, trust boundary, audience, and repo structure explanation
+- Republish the registry bundle so ClawHub and GitHub show the same onboarding story
+
 ## 0.1.1 - 2026-04-13
 
 - Declare `SX_API_URL` in frontmatter because the troubleshooting path references it
